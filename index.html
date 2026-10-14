@@ -1,0 +1,641 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f8f5ef">
+  <title>For Hassan, My Always ♡</title>
+  <meta name="description" content="A little birthday love letter, made with love for Hassan.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --cream: #f8f5ef;
+      --wine: #702d3b;
+      --rose: #a9797b;
+      --ink: #382d2c;
+      --muted: #8b817c;
+      --line: #e7ded5;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--cream);
+      color: var(--ink);
+      font-family: "DM Sans", sans-serif;
+      font-weight: 300;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    button {
+      font-family: inherit;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      padding: 23px 7%;
+      border-bottom: 1px solid var(--line);
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .brand {
+      color: var(--wine);
+    }
+
+    .hero {
+      min-height: 78vh;
+      padding: 75px 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .eyebrow {
+      margin-bottom: 24px;
+      color: var(--wine);
+      font-size: 10px;
+      letter-spacing: 4px;
+      line-height: 1.8;
+      text-transform: uppercase;
+    }
+
+    h1, h2, .letter, .signature {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-weight: 400;
+    }
+
+    h1 {
+      font-size: clamp(58px, 11vw, 112px);
+      line-height: .95;
+      letter-spacing: -2px;
+    }
+
+    h1 em, h2 em {
+      color: var(--wine);
+      font-weight: 400;
+    }
+
+    .hero-copy {
+      margin-top: 28px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 2;
+    }
+
+    .music-player {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 32px;
+      padding: 12px 18px;
+      border: 1px solid #cdbab0;
+      border-radius: 40px;
+    }
+
+    .music-button {
+      width: 38px;
+      height: 38px;
+      flex-shrink: 0;
+      border: none;
+      border-radius: 50%;
+      background: var(--wine);
+      color: white;
+      cursor: pointer;
+      font-size: 15px;
+    }
+
+    .track-title {
+      text-align: left;
+      font-size: 12px;
+    }
+
+    .track-subtitle {
+      margin-top: 4px;
+      color: var(--muted);
+      text-align: left;
+      font-size: 10px;
+    }
+
+    .scroll-link {
+      margin-top: 40px;
+      color: var(--muted);
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    section {
+      width: min(100%, 1000px);
+      margin: auto;
+      padding: 80px 24px;
+    }
+
+    .section-head {
+      margin-bottom: 36px;
+      text-align: center;
+    }
+
+    h2 {
+      color: var(--wine);
+      font-size: clamp(40px, 7vw, 65px);
+      line-height: 1.08;
+    }
+
+    .section-subtitle {
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.9;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      align-items: start;
+    }
+
+    .photo-card:nth-child(even) {
+      margin-top: 32px;
+    }
+
+    .photo {
+      overflow: hidden;
+      aspect-ratio: 4 / 5;
+      background: #eee6df;
+    }
+
+    .photo img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .6s ease;
+    }
+
+    .photo:hover img {
+      transform: scale(1.035);
+    }
+
+    .photo-caption {
+      padding-top: 12px;
+      color: var(--muted);
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 19px;
+      font-style: italic;
+    }
+
+    .letter-section {
+      max-width: 760px;
+    }
+
+    .letter {
+      font-size: clamp(22px, 3.6vw, 29px);
+      line-height: 1.75;
+      text-align: center;
+    }
+
+    .letter em {
+      color: var(--wine);
+    }
+
+    .signature {
+      margin-top: 32px;
+      color: var(--wine);
+      font-size: 32px;
+      text-align: center;
+    }
+
+    .final {
+      padding: 100px 22px 105px;
+      background: #efe6df;
+      text-align: center;
+    }
+
+    .final h2 {
+      font-size: clamp(43px, 8vw, 78px);
+      line-height: 1.1;
+    }
+
+    .final-copy {
+      margin-top: 24px;
+      color: #796b66;
+      font-size: 12px;
+      line-height: 2.1;
+    }
+
+    .heart {
+      display: block;
+      margin-top: 26px;
+      color: var(--wine);
+      font-size: 24px;
+    }
+
+    footer {
+      padding: 24px 12px;
+      color: var(--muted);
+      font-size: 9px;
+      letter-spacing: 2px;
+      text-align: center;
+    }
+
+    /* WELCOME SURPRISE SCREEN */
+
+    .welcome-screen {
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      overflow-y: auto;
+      background: var(--cream);
+      text-align: center;
+      opacity: 1;
+      visibility: visible;
+      transition: opacity .8s ease, visibility .8s ease;
+    }
+
+    .welcome-screen.hidden {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    .welcome-content {
+      width: 100%;
+      max-width: 560px;
+      animation: welcomeFade 1.2s ease both;
+    }
+
+    .welcome-heart {
+      display: block;
+      margin-bottom: 26px;
+      color: var(--wine);
+      font-family: Georgia, serif;
+      font-size: 36px;
+    }
+
+    .welcome-content h1 {
+      font-size: clamp(55px, 10vw, 88px);
+      line-height: .98;
+    }
+
+    .welcome-content h1 em {
+      color: var(--wine);
+    }
+
+    .welcome-text {
+      margin-top: 25px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 2;
+    }
+
+    .open-letter {
+      margin-top: 32px;
+      padding: 15px 25px;
+      border: 1px solid var(--wine);
+      border-radius: 40px;
+      background: var(--wine);
+      color: white;
+      font-size: 12px;
+      cursor: pointer;
+      transition: background .3s ease;
+    }
+
+    .open-letter:hover {
+      background: #54212d;
+    }
+
+    .welcome-date {
+      margin-top: 38px;
+      color: #a39890;
+      font-size: 10px;
+      letter-spacing: 3px;
+    }
+
+    button:focus-visible, a:focus-visible {
+      outline: 2px solid var(--wine);
+      outline-offset: 4px;
+    }
+
+    @keyframes welcomeFade {
+      from {
+        opacity: 0;
+        transform: translateY(12px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 520px) {
+      header {
+        padding: 19px 5%;
+        font-size: 8px;
+        letter-spacing: 1px;
+      }
+
+      .hero {
+        min-height: 75vh;
+        padding: 65px 18px;
+      }
+
+      section {
+        padding: 65px 20px;
+      }
+
+      .gallery {
+        gap: 11px;
+      }
+
+      .photo-card:nth-child(even) {
+        margin-top: 22px;
+      }
+
+      .photo-caption {
+        font-size: 16px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .welcome-screen,
+      .welcome-content,
+      .photo img {
+        animation: none;
+        transition: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- FIRST SCREEN: HIS BIRTHDAY SURPRISE -->
+
+  <div class="welcome-screen" id="welcomeScreen">
+    <div class="welcome-content">
+      <span class="welcome-heart">♡</span>
+
+      <p class="eyebrow">A little something, just for you</p>
+
+      <h1>Happy birthday,<br><em>my Dumpling.</em></h1>
+
+      <p class="welcome-text">
+        I made you something from my heart.<br>
+        Ready to open it, my love?
+      </p>
+
+      <button class="open-letter" id="openLetter" type="button">
+        Open your birthday letter ♡
+      </button>
+
+      <p class="welcome-date">21 · 10 · 2026</p>
+    </div>
+  </div>
+
+  <header>
+    <span class="brand">A little piece of my heart</span>
+    <span>21 · 10 · 2026</span>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+
+    <section class="hero" id="home">
+      <div class="eyebrow">To my favorite person</div>
+
+      <h1>For Hassan,<br><em>my always.</em></h1>
+
+      <p class="hero-copy">
+        Twenty-nine years of you.<br>
+        And I get to love you in this lifetime.
+      </p>
+
+      <div class="music-player">
+        <button
+          class="music-button"
+          id="musicBtn"
+          type="button"
+          aria-label="Play our song"
+          aria-pressed="false"
+        >▶</button>
+
+        <div>
+          <div class="track-title">Until I Found You</div>
+          <div class="track-subtitle">Stephen Sanchez · Our little soundtrack</div>
+        </div>
+      </div>
+
+      <audio id="song" src="music/song.mp3" loop preload="auto"></audio>
+
+      <a class="scroll-link" href="#memories">
+        A little love letter ↓
+      </a>
+    </section>
+
+    <!-- FOUR PHOTOS -->
+
+    <section id="memories">
+      <div class="section-head">
+        <div class="eyebrow">Little moments, endless love</div>
+        <h2>Us, in little pieces.</h2>
+        <p class="section-subtitle">
+          Some memories become part of who we are.
+        </p>
+      </div>
+
+      <div class="gallery">
+
+        <div class="photo-card">
+          <div class="photo">
+            <img src="images/photo1.jpeg" alt="A favorite memory of us together">
+          </div>
+          <p class="photo-caption">A moment I'd relive.</p>
+        </div>
+
+        <div class="photo-card">
+          <div class="photo">
+            <img src="images/photo2.jpeg" alt="Another beautiful memory together">
+          </div>
+          <p class="photo-caption">My favorite kind of happiness.</p>
+        </div>
+
+        <div class="photo-card">
+          <div class="photo">
+            <img src="images/photo3.jpeg" alt="A memory I want to keep forever">
+          </div>
+          <p class="photo-caption">Somewhere in our little world.</p>
+        </div>
+
+        <div class="photo-card">
+          <div class="photo">
+            <img src="images/photo4.jpeg" alt="One more special moment with you">
+          </div>
+          <p class="photo-caption">And a thousand more to come.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- LOVE LETTER -->
+
+    <section class="letter-section" id="letter">
+      <div class="section-head">
+        <div class="eyebrow">From my heart to yours</div>
+        <h2>You feel like home.</h2>
+      </div>
+
+      <div class="letter">
+        I used to think that some feelings were too big for words.
+        Then you came into my life, and somehow, even with all
+        the words in the world, I still wouldn't know how to
+        explain what you mean to me.
+        <br><br>
+
+        You love me in a way my heart has always longed for.
+        In the gentleness of your love, I have found a softness
+        I never want to lose. With you, I don't have to be
+        anything other than myself. I can simply <em>be.</em>
+        <br><br>
+
+        You have healed parts of me without even knowing how.
+        You have made love feel less like something I have to
+        search for and more like something I can finally rest in.
+        And if home could ever be a person, my heart would
+        recognize you with its eyes closed.
+        <br><br>
+
+        Happy twenty-ninth birthday, my Dumpling.
+        I hope this year is kind to you. I hope your dreams
+        find their way to you, your worries grow lighter,
+        and life gives back all the happiness you bring
+        into mine.
+        <br><br>
+
+        I cannot promise that every day will be perfect.
+        But I can promise that my heart will keep choosing you,
+        in the ordinary moments, in the difficult ones,
+        and in all the beautiful days still waiting for us.
+        <br><br>
+
+        If I had a thousand lifetimes, I would still hope
+        to find you in every single one.
+      </div>
+
+      <div class="signature">All my love, always ♡</div>
+    </section>
+
+    <!-- FINAL BIRTHDAY MESSAGE -->
+
+    <div class="final">
+      <div class="eyebrow">For your twenty-ninth year</div>
+
+      <h2>
+        My favorite place<br>
+        will always be<br>
+        <em>wherever you are.</em>
+      </h2>
+
+      <p class="final-copy">
+        Happy birthday, Hassan.<br>
+        Thank you for being you, and for loving me the way you do.<br>
+        Here's to your dreams, our love, and all that is yet to come.
+      </p>
+
+      <span class="heart" aria-hidden="true">♡</span>
+    </div>
+
+  </main>
+
+  <footer>
+    MADE WITH LOVE, JUST FOR YOU · 21.10.2026
+  </footer>
+
+  <script>
+    const song = document.getElementById("song");
+    const musicBtn = document.getElementById("musicBtn");
+    const welcomeScreen = document.getElementById("welcomeScreen");
+    const openLetter = document.getElementById("openLetter");
+
+    function updateMusicButton(isPlaying) {
+      musicBtn.textContent = isPlaying ? "Ⅱ" : "▶";
+      musicBtn.setAttribute(
+        "aria-label",
+        isPlaying ? "Pause our song" : "Play our song"
+      );
+      musicBtn.setAttribute("aria-pressed", String(isPlaying));
+    }
+
+    // Clicking the welcome button reveals the page and
+    // attempts to start music during the same user interaction.
+    openLetter.addEventListener("click", async () => {
+      welcomeScreen.classList.add("hidden");
+
+      try {
+        await song.play();
+        updateMusicButton(true);
+      } catch (error) {
+        updateMusicButton(false);
+        console.log("Music did not start. Use the play button.");
+      }
+    });
+
+    // Play/pause button on the main website.
+    musicBtn.addEventListener("click", async () => {
+      if (song.paused) {
+        try {
+          await song.play();
+          updateMusicButton(true);
+        } catch (error) {
+          alert(
+            "The song could not play. Please check that music/song.mp3 exists and is a valid audio file."
+          );
+          updateMusicButton(false);
+        }
+      } else {
+        song.pause();
+        updateMusicButton(false);
+      }
+    });
+
+    song.addEventListener("pause", () => {
+      updateMusicButton(false);
+    });
+
+    song.addEventListener("play", () => {
+      updateMusicButton(true);
+    });
+  </script>
+
+</body>
+</html>
